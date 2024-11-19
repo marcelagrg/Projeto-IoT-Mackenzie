@@ -42,5 +42,8 @@ Para rodar o projeto:
 - Instale as dependências:
 - Backend (Node.js): `npm install`
 - Frontend (React): `npm install`
-- Suba o servidor MQTT e o backend localmente.
+- Inicie as dependências:
+- Backend: `node server.js`
+- Frontend: `npm start`
+- Suba o servidor MQTT localmente.
 - Acesse a aplicação no navegador: `http://localhost:3000`
