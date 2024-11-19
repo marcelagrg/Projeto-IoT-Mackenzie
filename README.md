@@ -36,7 +36,7 @@ A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Brok
 •	A interface do usuário, desenvolvida em React.js, coleta os dados diretamente do MQTT Broker e exibe esses valores de forma gráfica, permitindo o monitoramento em tempo real.
 
 
-##Uso
+## Uso
 Para rodar o projeto:
 
 Clone o repositório: git clone https://github.com/usuario/repositorio.git
