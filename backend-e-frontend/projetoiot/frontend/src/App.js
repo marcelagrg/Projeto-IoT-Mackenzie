@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'; // Importando axios para facilitar as requisições HTTP
+import axios from 'axios'; 
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
-import './App.css'; // Importa os estilos do arquivo App.css
+import './App.css'; 
 
 
 const App = () => {
@@ -17,7 +17,6 @@ const App = () => {
       const response = await axios.get('http://localhost:3001/api/sensordata');
       const data = response.data;
 
-      // Adiciona os dados ao estado
       const temperatures = data.map(d => d.temperature);
       const humidities = data.map(d => d.humidity);
       const times = data.map(d => new Date(d.timestamp).toLocaleString('pt-BR', {
@@ -39,7 +38,7 @@ const App = () => {
   useEffect(() => {
     fetchSensorData();
     const interval = setInterval(fetchSensorData, 5000); // Atualiza os dados a cada 5 segundos
-    return () => clearInterval(interval); // Limpa o intervalo ao desmontar o componente
+    return () => clearInterval(interval); 
   }, []);
 
   const tempChartData = {
