@@ -6,15 +6,11 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-// Middleware
 app.use(cors());
 
-// Dados em memória
 let sensorData = [];
 
-// Configuração do cliente MQTT
-// Alterando para conexão TCP
-const mqttClient = mqtt.connect('ws://192.168.0.100:9001'); // Porta 1883 para conexão TCP
+const mqttClient = mqtt.connect('ws://192.168.0.100:9001'); // Conexão via WebSocket
 
 mqttClient.on('connect', () => {
   console.log("Conectado ao broker MQTT");
