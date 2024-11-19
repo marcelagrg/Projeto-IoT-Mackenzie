@@ -5,6 +5,7 @@ Este repositório contém o código-fonte de um sistema de monitoramento de temp
 O projeto foi construído utilizando a Placa de desenvolvimento ESP32-DevKitC V4 e o sensor de temperatura e umidade DHT22. Além disso, foi utilizado um transistor BC547 e um LED difuso, quando inicia-se a leitura do sensor, o transistor é acionado para acender o LED por 2 segundos, transmitindo uma resposta visual da leitura dos dados. O código do ESP32 foi desenvolvido na plataforma Arduino IDE.
 A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Broker Mosquitto para o envio de dados. O backend, desenvolvido em node.js, é responsável por receber, manipular e enviar esses dados ao frontend, desenvolvido em React. Para garantir uma atualização em tempo real da interface, foi implementado o protocolo WebSockets.
 
+
 ## Descrição
 ### Componentes:
 - Sensor DHT22.
@@ -16,6 +17,7 @@ A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Brok
 - O sensor coleta dados e transmite ao ESP32.
 - O ESP32 publica os dados no broker MQTT.
 - O backend coleta os dados do broker MQTT e os envia ao frontend.
+
 
 ## Funcionamento
 ### Configuração e Inicialização:
@@ -32,6 +34,7 @@ A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Brok
 
 ### Integração com o Frontend
 •	A interface do usuário, desenvolvida em React.js, coleta os dados diretamente do MQTT Broker e exibe esses valores de forma gráfica, permitindo o monitoramento em tempo real.
+
 
 ##Uso
 Para rodar o projeto:
