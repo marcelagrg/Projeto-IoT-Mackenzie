@@ -42,6 +42,8 @@ void reconnectMQTT() {
 void setup() {
   Serial.begin(115200);
 
+  pinMode(TRANSISTOR_PIN, OUTPUT);
+
   // Conexão ao Wi-Fi
   WiFi.begin(ssid, password);
   while (WiFi.status() != WL_CONNECTED) {
