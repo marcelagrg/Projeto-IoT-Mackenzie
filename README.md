@@ -38,9 +38,9 @@ A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Brok
 
 ## Uso
 Para rodar o projeto:
-- Clone o repositório: `### git clone https://github.com/usuario/repositorio.git`
+- Clone o repositório:  `git clone https://github.com/usuario/repositorio.git`
 - Instale as dependências:
-- Backend (Node.js): `### npm install`
-- Frontend (React): `### npm install`
+- Backend (Node.js): `npm install`
+- Frontend (React): `npm install`
 - Suba o servidor MQTT e o backend localmente.
-- Acesse a aplicação no navegador: `### http://localhost:3000`
+- Acesse a aplicação no navegador: `http://localhost:3000`
