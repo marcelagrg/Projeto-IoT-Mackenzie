@@ -3,23 +3,24 @@
 #include <DHT.h>
 
 // Configuração do Wi-Fi
-const char* ssid = "Ecgrigolon2.4";
-const char* password = "MilkLindo0135";
+const char* ssid = " "; //SSID do WiFi
+const char* password = " "; // Senha do WiFi
 
 // Configurações do broker MQTT
 const char* mqttServer = "192.168.0.100"; // IP do broker MQTT
-const int mqttPort = 1883;
+const int mqttPort = 1883; // Porta do broker MQTT
 
-// Configuração dos tópicos MQTT
+// Tópico para onde os dados serão enviados via MQTT
 const char* sensorTopic = "esp32/sensordata";
 
-// Configuração do sensor DHT
-#define DHTPIN 15          // GPIO onde o DHT22 está conectado
-#define DHTTYPE DHT22      // Tipo de sensor
+// GPIO onde o DHT22 está conectado
+#define DHTPIN 15
+// Tipo de sensor
+#define DHTTYPE DHT22      
 DHT dht(DHTPIN, DHTTYPE);
 
-// Configuração do LED/transistor
-#define TRANSISTOR_PIN 4   // GPIO onde o pino base do transistor está conectado
+ // GPIO onde o pino base do transistor está conectado
+#define TRANSISTOR_PIN 4  
 
 WiFiClient wifiClient;
 PubSubClient client(wifiClient);
@@ -49,7 +50,6 @@ void setup() {
   }
   Serial.println("Conectado ao Wi-Fi!");
 
-  // Atraso para garantir que a conexão Wi-Fi esteja estável
   delay(1000);
 
   // Configuração do broker MQTT
