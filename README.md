@@ -40,7 +40,7 @@ A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Brok
 
 ## Uso
 Para rodar o projeto:
-- Clone o repositório:  `git clone https://github.com/usuario/repositorio.git`
+- Clone o repositório:  `git clone [https://github.com/usuario/repositorio.git](https://github.com/marcelagrg/Projeto-IoT-Mackenzie)`
 - Instale as dependências:
 - Backend (Node.js): `npm install`
 - Frontend (React): `npm install`
