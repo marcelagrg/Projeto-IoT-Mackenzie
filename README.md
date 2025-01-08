@@ -5,6 +5,7 @@ Este repositório contém o código-fonte de um sistema de monitoramento de temp
 O projeto foi construído utilizando a Placa de desenvolvimento ESP32-DevKitC V4 e o sensor de temperatura e umidade DHT22. Além disso, foi utilizado um transistor BC547 e um LED difuso, quando inicia-se a leitura do sensor, o transistor é acionado para acender o LED por 2 segundos, transmitindo uma resposta visual da leitura dos dados. O código do ESP32 foi desenvolvido na plataforma Arduino IDE.
 A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Broker Mosquitto para o envio de dados. O backend, desenvolvido em node.js, é responsável por receber, manipular e enviar esses dados ao frontend, desenvolvido em React. Para garantir uma atualização em tempo real da interface, foi implementado o protocolo WebSockets.
 
+![1000235875](https://github.com/user-attachments/assets/7cb77428-d28b-4a54-83c5-fb08c2aab501)
 
 ## Descrição
 ### Componentes:
@@ -21,19 +22,19 @@ A comunicação foi feita a partir do protocolo MQTT e foi utilizado o MQTT Brok
 
 ## Funcionamento
 ### Configuração e Inicialização:
-•	O ESP32 é conectado ao dispositivo a partir de uma fonte de 5V;
-•	O Arduino IDE é utilizado para compilar e transferir o código para o ESP32;
-•	São configurados os pinos de entrada e saída. Um pino de entrada é utilizado para ler sinais externos, como os sinais recebidos por um sensor. O pino de dados do DHT22 (DATA) está conectado a um pino GPIO do ESP32, que foi configurado para funcionar como entrada. Essa conexão permite que o ESP32 efetue a leitura da temperatura e umidade emitidas pelo sensor. Um pino configurado como saída é utilizado para controlar dispositivos externos, nesse caso são controlados o LED e o transistor.
+- O ESP32 é conectado ao dispositivo a partir de uma fonte de 5V;
+- O software Arduino IDE é utilizado para compilar e transferir o código para o ESP32;
+- São configurados os pinos de entrada e saída. Um pino de entrada é utilizado para ler sinais externos, como os sinais recebidos por um sensor. O pino de dados do DHT22 (DATA) está conectado a um pino GPIO do ESP32, que foi configurado para funcionar como entrada. Essa conexão permite que o ESP32 efetue a leitura da temperatura e umidade emitidas pelo sensor. Um pino configurado como saída é utilizado para controlar dispositivos externos, nesse caso são controlados o LED e o transistor.
 
 ### Leitura do Sensor:
-•	A cada 5 segundos, o ESP32 ativa o sensor DHT22 para coletar dados de temperatura e umidade.
-•	Durante a leitura, o ESP32 aciona o transístor que acende o LED, mantendo-o aceso por 2 segundos. Após esse tempo o Led permanece 5 segundos desligado até a nova medição.
+- A cada 5 segundos, o ESP32 ativa o sensor DHT22 para coletar dados de temperatura e umidade.
+- Durante a leitura, o ESP32 aciona o transístor que acende o LED, mantendo-o aceso por 2 segundos. Após esse tempo o Led permanece 5 segundos desligado até a nova medição.
 
 ### Envio dos Dados Coletados:
-•	O ESP32 publica os dados no tópico “esp32/sensordata” do broker MQTT. O broker utilizado é o Mosquitto.
+- O ESP32 publica os dados no tópico “esp32/sensordata” do broker MQTT. O broker utilizado é o Mosquitto.
 
 ### Integração com o Frontend
-•	A interface do usuário, desenvolvida em React.js, coleta os dados diretamente do MQTT Broker e exibe esses valores de forma gráfica, permitindo o monitoramento em tempo real.
+- A interface do usuário, desenvolvida em React.js, coleta os dados diretamente do MQTT Broker e exibe esses valores de forma gráfica, permitindo o monitoramento em tempo real.
 
 
 ## Uso
